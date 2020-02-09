@@ -9,8 +9,9 @@ package inheritthewind;
  *
  * @author wesley.mcmillen
  */
-public class Day8 extends Day7{
-    public Day8(){
-        super();
+public class Day8 extends Day7 {
+
+    public Day8(Day7 day8) {
+        super(day8);
     }
 }

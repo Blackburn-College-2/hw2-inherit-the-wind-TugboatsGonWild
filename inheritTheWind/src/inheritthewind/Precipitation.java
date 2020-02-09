@@ -6,12 +6,14 @@
 package inheritthewind;
 
 /**
+ * Precipitation stuff
  *
  * @author wesley.mcmillen
  */
-public class Precipitation extends Measurement{
+public class Precipitation extends Measurement {
+
     String unit = "cm";
-    double precipitation = 20 * Math.random() + 0;
+    double precipitation = 15 * Math.random() + 0;
     double tempChangePrecip;
 
     public double getPrecipitation(double temp) {

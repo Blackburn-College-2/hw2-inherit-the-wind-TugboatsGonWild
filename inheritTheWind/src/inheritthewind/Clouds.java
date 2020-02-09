@@ -16,8 +16,8 @@ public class Clouds {
     }
 
     public double getClouds(double morningTemp) {
-        double cloudcover = (int)4 * Math.random() + 1;
-        int clouds = (int)cloudcover;
+        double cloudcover = (int) 4 * Math.random() + 1;
+        int clouds = (int) cloudcover;
         double degrees = morningTemp;
         if (clouds == 1) {
             degrees += 6;

@@ -9,26 +9,34 @@ package inheritthewind;
  *
  * @author wesley.mcmillen
  */
-public class Wind extends Measurement{
-String unit = "kph";
+public class Wind extends Measurement {
+
+    String unit = "kph";
+
     public Wind() {
 
     }
-/**
- * returns the change in temperature
- *  direction = 1 means wind from north
- */
-    public int windVector() {
-        int tempChange=0;
-        double direction = 2*Math.random()+1;
-        double speed = 15*Math.random()+0;
-        if(direction == 1){
-            tempChange = (int)(speed%(.65));
-            tempChange = 0-tempChange;
-        }else{
-            tempChange = (int)(speed*.5);
+
+    /**
+     * returns the change in temperature direction = 1 means wind from north
+     *
+     * @return
+     */
+    public double windVector() {
+        double tempChange;
+        double direction = (int) (2 * Math.random()) + 1;
+        double speed = 15 * Math.random() + 0;
+        if (direction == 2) {
+            tempChange = -(speed % (.65));
+        } else {
+            tempChange = (int) (speed * .5);
         }
-        System.out.println("Temperature change from wind for morning Temp" + tempChange);
-return tempChange;
+        System.out.println("Temperature change from wind for morning temp " + tempChange + "C");
+        if (direction == 2) {
+            System.out.println("Wind: " + (int) speed + " " + unit + " from North");
+        } else {
+            System.out.println("Wind: " + (int) speed + " " + unit + " from South");
+        }
+        return tempChange;
     }
 }

@@ -7,15 +7,20 @@ package inheritthewind;
 
 /**
  *
+ * Didn't see use of this class
+ *
  * @author wesley.mcmillen
  */
 public class Measurement {
-public String unit = "";
-    public Measurement(){
+
+    public String unit = "";
+
+    public Measurement() {
     }
+
     @Override
-    public String toString(){
-      
+    public String toString() {
+
         return "";
     }
 }

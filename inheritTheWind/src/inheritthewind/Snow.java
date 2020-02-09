@@ -6,6 +6,7 @@
 package inheritthewind;
 
 /**
+ * snow specific
  *
  * @author wesley.mcmillen
  */
@@ -13,9 +14,9 @@ public class Snow extends Precipitation {
 
     @Override
     public double getPrecipitation(double temp) {
-        if (temp <= 32) {
-            System.out.println("cm of snow: " + (precipitation*10));
-
+        if (temp <= 0) {
+            System.out.println("cm of snow: " + (int) (precipitation * 10));
+            tempChangePrecip = -(precipitation * .15);
         }
         return tempChangePrecip;
     }
